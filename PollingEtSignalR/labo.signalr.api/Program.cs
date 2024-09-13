@@ -16,6 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // TODO: SignalR: Ajouter SignalR
+builder.Services.AddSignalR();
 
 builder.Services.AddCors(options =>
 {
