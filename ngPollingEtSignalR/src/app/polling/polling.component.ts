@@ -39,6 +39,6 @@ export class PollingComponent implements OnInit {
     console.log(x)
     this.tasks = x;
     // TODO: UNE FOIS QUE VOUS AVEZ TESTER AVEC DEUX CLIENTS: Utiliser le polling pour mettre la liste de tasks à jour chaque seconde
-    setTimeout(() => {this.updateTasks()}, 500)
+   // setTimeout(() => {this.updateTasks()}, 500)
   }
 }
