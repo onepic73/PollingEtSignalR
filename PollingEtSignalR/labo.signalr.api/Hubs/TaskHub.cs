@@ -20,7 +20,9 @@ namespace labo.signalr.api.Hubs
         public override async Task OnDisconnectedAsync(Exception? exception)
         {
             base.OnDisconnectedAsync(exception);
-            
+            await UserHandler.ConnectedIds.Remove();
+            await Clients.All.SendAsync("UserCount", UserHandler.ConnectedIds.Count);
+
         }
 
         public async Task AddTask(string taskName)
